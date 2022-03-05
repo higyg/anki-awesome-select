@@ -5,13 +5,13 @@
 
 <div class="wrap-container">
   <div class="body">
-    <div class="question">{{id}}.<span id="questionType" class="question-type"> </span>{{cloze:question}}</div>
+    <div class="question"><span id="questionType" class="question-type"> </span>{{cloze:question}}</div>
     <div class="options" id="front-options"></div>
     <div id="front-tag"></div>
   </div>
 </div>
 
-<div id="front-footer" class="footer">v3.15，作者：git9527</div>
+<div id="front-footer" class="footer"></div>
 
 <div id="settingsModal" class="modal">
 
@@ -21,7 +21,7 @@
 
   var DEFAULT_SHOW_QUESTION_TYPE = '0'
   var DEFAULT_HIDE_OPTIONS = '0'
-  var DEFAULT_RANDOM_OPTIONS = '0'
+  var DEFAULT_RANDOM_OPTIONS = '1'
   var DEFAULT_DELAY_OPTIONS = '0'
   var DEFAULT_NORMAL_OPTIONS = '0'
   var DEFAULT_HIDE_NOTES = '0'
@@ -278,7 +278,7 @@
       '    <span class="close" onclick="hideSettings()">&times;</span>\n' +
       '    <div class="settings-block">\n' +
       '      <div class="single-setting">\n' +
-      '        <div class="setting-label">显示类型</div>\n' +
+      '        <div class="setting-label" >显示类型</div>\n' +
       '        <div class="setting-switch">\n' +
       '          <input id="show-type" class="mui-switch mui-switch-anim" type="checkbox" onchange="switchShowType(this)">\n' +
       '        </div>\n' +
@@ -324,7 +324,7 @@
   }
 
   function updateFrontFooter() {
-    document.getElementById("front-footer").insertAdjacentHTML('beforeend', '，<a href="javascript:showSettings();">卡片设置</a>，开源地址：<a href="https://github.com/git9527/anki-awesome-select">Github</a> | <a href="https://gitee.com/git9527/anki-awesome-select">Gitee</a>');
+    document.getElementById("front-footer").insertAdjacentHTML('beforeend', ' <a href="javascript:showSettings();">卡片设置</a>');
   }
 
   showTags()
